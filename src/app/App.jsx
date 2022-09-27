@@ -5,7 +5,7 @@ import { Main } from "../routes/Main";
 export const App = () => {
     return (
         <React.Fragment>
-            <main className="project">
+            <main className="project__main">
                 <Main />
             </main>
         </React.Fragment>

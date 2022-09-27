@@ -1,11 +1,34 @@
 import React from "react";
+import "../styles/Project.css";
+import { useParams } from "react-router-dom";
+import { useFetch } from "../global/FetchAPI";
 
 export const Project = () => {
+    const { id } = useParams();
+    const URL = `http://localhost:5000/projects/${id}`;
+    const { error, isPending, data: project } = useFetch(URL);
+
     return (
-        <React.Fragment>
-            <h1>Project</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quis nulla inventore sint similique autem sit. Itaque at maxime iusto! Ullam provident quos quis quaerat ratione dignissimos exercitationem aliquid molestiae.</p>
-        </React.Fragment>
+        <main className="project">
+            {error && <p className="error">{error}</p>}
+            {isPending && <p className="loading">Loading...</p>}
+            {project && (
+                <React.Fragment>
+                    <h2 className="page__title">{project.title}</h2>
+                    <p>Takes {project.cookingTime} to cook.</p>
+                    <ul className="project__ul">
+                        {project.ingredients.map((ing) => {
+                            <li 
+                                className="project__li"
+                                key={ing}
+                                >ing
+                            </li>
+                        })}
+                    </ul>
+                    <p className="method">{project.method}</p>
+                </React.Fragment>
+            )}
+        </main>
     );
 };
 
