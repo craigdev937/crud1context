@@ -29,7 +29,7 @@ input, textarea {
     box-sizing: border-box;
 }
 
-.page-title {
+.page__title {
     text-align: center;
     margin: 40px auto;
     color: #333;
