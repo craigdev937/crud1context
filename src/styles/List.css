@@ -1,4 +1,4 @@
-.project__list {
+.project {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 40px;
@@ -50,5 +50,28 @@
     border-radius: 4px;
     margin: 20px auto 0;
 }
+
+/* dark mode */
+.project__card.dark {
+    background: steelblue;
+}
+
+.project__cookingTime.dark,
+.project__title.dark,
+.project__method.dark {
+    color: #e4e4e4;
+}
+
+
+/* .recipe-list .card.dark {
+    background: #555;
+} */
+
+/* .recipe-list .card.dark p,
+.recipe-list .card.dark h3,
+.recipe-list .card.dark div {
+    color: #e4e4e4;
+} */
+
 
 

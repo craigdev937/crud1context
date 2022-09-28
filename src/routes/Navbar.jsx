@@ -17,7 +17,11 @@ export const Navbar = () => {
                         <h1>Project</h1>
                     </Link>
                     <SearchBar />
-                    <Link to="/create" className="navbar__brand-last">Create Project</Link>
+                    <Link 
+                        to="/create" 
+                        className="navbar__brand-last"
+                        >Create Project
+                    </Link>
                 </nav>
             </main>
         </React.Fragment>

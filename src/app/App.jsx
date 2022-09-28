@@ -7,9 +7,7 @@ export const App = () => {
     return (
         <React.Fragment>
             <ThemeProvider>
-                <main className="project__main">
-                    <Main />
-                </main>
+                <Main />
             </ThemeProvider>
         </React.Fragment>
     );

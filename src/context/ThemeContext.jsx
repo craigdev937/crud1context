@@ -15,8 +15,8 @@ const themeReducer = (state, action) => {
 
 export const ThemeProvider = ({ children }) => {
     const [state, dispatch] = React.useReducer(themeReducer, {
-        color: "blue",
-        mode: "dark"
+        color: "#58249c",
+        mode: "light"
     });
     const changeColor = (color) => {
         dispatch({ type: "CHANGE_COLOR", payload: color });
@@ -29,7 +29,7 @@ export const ThemeProvider = ({ children }) => {
         <ThemeContext.Provider value={{
             ...state, changeColor, changeMode
         }}>
-            { children }
+            {children}
         </ThemeContext.Provider>
     );
 };

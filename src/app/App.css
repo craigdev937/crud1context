@@ -40,9 +40,12 @@ input, textarea {
     margin: 40px auto;
 }
 
-.project__main {
+.App {
     min-height: 100%;
 }
 
+.App.dark {
+    background: #333;
+}
 
 

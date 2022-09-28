@@ -6,14 +6,16 @@ import { Create } from "../pages/Create";
 import { Search } from "../pages/Search";
 import { Project } from "../pages/Project";
 import { useTheme } from "../hooks/useTheme";
+import { ThemeSelector } from "../components/ThemeSelector";
 
 export const Main = () => {
     const { mode } = useTheme();
 
     return (
         <BrowserRouter>
-            <main className={`${mode}`}>
+            <main className={`App ${mode}`}>
             <Navbar />
+                <ThemeSelector />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/create" element={<Create />} />
